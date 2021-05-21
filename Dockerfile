@@ -1,5 +1,7 @@
 FROM alpine
 
+WORKDIR /workspace
+
 RUN set -e; \
     apk add --virtual .build-deps --no-cache curl bash; \
     curl -L https://github.com/dolthub/dolt/releases/latest/download/install.sh | bash; \
